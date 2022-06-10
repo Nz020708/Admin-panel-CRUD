@@ -1,0 +1,22 @@
+﻿@using WebApplication1.ViewModels.Categories
+@model CategoryCreateVM
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h4>Create new category:</h4>
+<form role="form" class="text-start" method="post">
+    <div class="input-group input-group-outline my-3">
+        <label class="form-label" asp-for="Name">Category Name</label>
+        <input type="text" class="form-control" asp-for="Name">
+        <span class="text-danger" asp-validation-for="Name"></span>
+    </div>
+    <div class="text-center">
+        <button type="submit" class="btn bg-gradient-primary w-100 my-4 mb-2">Create</button>
+        <a class="btn btn-light" asp-action="Index">Cancel</a>
+    </div>
+</form>
+@section script{
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.4/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js" integrity="sha512-o6XqxgrUsKmchwy9G5VRNWSSxTS4Urr4loO6/0hYdpWmFUfHqGzawGxeQGMDqYzxjY9sbktPbNlkIQJWagVZQg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+}
